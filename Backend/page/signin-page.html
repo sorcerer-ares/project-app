@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Webcrumbs Plugin</title>
+        
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="https://cdn.webcrumbs.org/assets/images/landing/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="192x192"
+            href="https://cdn.webcrumbs.org/assets/images/landing/logo192.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="512x512"
+            href="https://cdn.webcrumbs.org/assets/images/landing/logo512.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Webcrumbs" />
+    </head>
+    <body>
+        <div id="webcrumbs">
+            <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden max-w-4xl w-full flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/2 p-8 md:p-10 relative">
+                        <div class="flex justify-between items-center mb-8">
+                            <div class="flex items-center space-x-2">
+                                <div class="bg-primary-500 p-1.5 rounded-md">
+                                    <span class="material-symbols-outlined text-white">cloud</span>
+                                </div>
+                                <h1 class="text-xl font-bold">CloudStorage</h1>
+                            </div>
+                            <button class="text-sm text-gray-500 hover:text-primary-600 transition-colors duration-300">
+                                Need help?
+                            </button>
+                        </div>
+                        <h2 class="text-2xl font-bold mb-2">Welcome Back</h2>
+                        <p class="text-gray-500 mb-8">Please enter your details to sign in</p>
+                        <div class="space-y-5">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-400 focus:border-primary-500 transition-all duration-300 outline-none"
+                                    placeholder="Enter your email"
+                                />
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mb-1.5">
+                                    <label for="password" class="block text-sm font-medium text-gray-700"
+                                        >Password</label
+                                    >
+                                    <button
+                                        class="text-xs text-primary-600 hover:text-primary-800 transition-colors duration-300 font-medium"
+                                    >
+                                        Forgot password?
+                                    </button>
+                                </div>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-400 focus:border-primary-500 transition-all duration-300 outline-none"
+                                    placeholder="Enter your password"
+                                />
+                            </div>
+                            <div class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    id="remember"
+                                    class="w-4 h-4 text-primary-600 rounded border-gray-300 focus:ring-primary-400"
+                                />
+                                <label for="remember" class="ml-2 block text-sm text-gray-700">
+                                    Remember for 30 days
+                                </label>
+                            </div>
+                            <button
+                                class="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                            >
+                                Sign In
+                            </button>
+                            <div class="relative flex items-center justify-center py-2">
+                                <div class="border-t border-gray-300 flex-grow"></div>
+                                <span class="mx-4 text-sm text-gray-500">or continue with</span>
+                                <div class="border-t border-gray-300 flex-grow"></div>
+                            </div>
+                            <div class="flex space-x-3">
+                                <button
+                                    class="flex-1 flex justify-center items-center py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                                >
+                                    <i class="fa-brands fa-google text-xl"></i>
+                                </button>
+                                <button
+                                    class="flex-1 flex justify-center items-center py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                                >
+                                    <i class="fa-brands fa-apple text-xl"></i>
+                                </button>
+                                <button
+                                    class="flex-1 flex justify-center items-center py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                                >
+                                    <i class="fa-brands fa-microsoft text-xl"></i>
+                                </button>
+                            </div>
+                            <p class="text-center text-gray-600 text-sm mt-6">
+                                Don&#x27;t have an account?
+                                <button
+                                    class="text-primary-600 hover:text-primary-800 font-medium ml-1 transition-colors duration-300"
+                                >
+                                    Sign up
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 bg-primary-600 p-10 hidden md:flex flex-col justify-between relative overflow-hidden"
+                    >
+                        <div class="relative z-10">
+                            <h3 class="text-white text-2xl font-bold mb-6">
+                                Store everything important in one secure location
+                            </h3>
+                            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl mb-8">
+                                <div class="flex items-start mb-4">
+                                    <div class="bg-white/20 p-2 rounded-full mr-4">
+                                        <span class="material-symbols-outlined text-white">security</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white font-medium">End-to-end encryption</h4>
+                                        <p class="text-white/70 text-sm mt-1">
+                                            Your files are encrypted and secure in our cloud
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-white/20 p-2 rounded-full mr-4">
+                                        <span class="material-symbols-outlined text-white">devices</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white font-medium">Access anywhere</h4>
+                                        <p class="text-white/70 text-sm mt-1">Available on desktop, mobile and web</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 right-0 opacity-20 -mb-16 -mr-16">
+                            <span class="material-symbols-outlined text-white text-[200px]">cloud_circle</span>
+                        </div>
+                        <div class="flex items-center space-x-4 relative z-10">
+                            <div class="flex -space-x-2">
+                                <img
+                                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwxfHx1c2VyJTIwcHJvZmlsZXxlbnwwfHx8fDE3NjExNjc2ODR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    alt="User"
+                                    class="w-10 h-10 rounded-full border-2 border-primary-600"
+                                    keywords="user profile, avatar, woman"
+                                />
+                                <img
+                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwyfHx1c2VyJTIwcHJvZmlsZXxlbnwwfHx8fDE3NjExNjc2ODR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    alt="User"
+                                    class="w-10 h-10 rounded-full border-2 border-primary-600"
+                                    keywords="user profile, avatar, man"
+                                />
+                                <img
+                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwzfHx1c2VyJTIwcHJvZmlsZXxlbnwwfHx8fDE3NjExNjc2ODR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    alt="User"
+                                    class="w-10 h-10 rounded-full border-2 border-primary-600"
+                                    keywords="user profile, avatar, woman"
+                                />
+                            </div>
+                            <div class="text-white">
+                                <p class="text-sm font-medium">Join 10,000+ users</p>
+                                <p class="text-xs text-white/70">Start your free trial today</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

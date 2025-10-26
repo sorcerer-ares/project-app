@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Webcrumbs Plugin</title>
+        <style>
+            @import url(https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap);
+            @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+            @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined);
+            @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
+
+            *,
+            :after,
+            :before {
+                --tw-border-spacing-x: 0;
+                --tw-border-spacing-y: 0;
+                --tw-translate-x: 0;
+                --tw-translate-y: 0;
+                --tw-rotate: 0;
+                --tw-skew-x: 0;
+                --tw-skew-y: 0;
+                --tw-scale-x: 1;
+                --tw-scale-y: 1;
+                --tw-pan-x: ;
+                --tw-pan-y: ;
+                --tw-pinch-zoom: ;
+                --tw-scroll-snap-strictness: proximity;
+                --tw-gradient-from-position: ;
+                --tw-gradient-via-position: ;
+                --tw-gradient-to-position: ;
+                --tw-ordinal: ;
+                --tw-slashed-zero: ;
+                --tw-numeric-figure: ;
+                --tw-numeric-spacing: ;
+                --tw-numeric-fraction: ;
+                --tw-ring-inset: ;
+                --tw-ring-offset-width: 0px;
+                --tw-ring-offset-color: #fff;
+                --tw-ring-color: rgba(59, 130, 246, 0.5);
+                --tw-ring-offset-shadow: 0 0 #0000;
+                --tw-ring-shadow: 0 0 #0000;
+                --tw-shadow: 0 0 #0000;
+                --tw-shadow-colored: 0 0 #0000;
+                --tw-blur: ;
+                --tw-brightness: ;
+                --tw-contrast: ;
+                --tw-grayscale: ;
+                --tw-hue-rotate: ;
+                --tw-invert: ;
+                --tw-saturate: ;
+                --tw-sepia: ;
+                --tw-drop-shadow: ;
+                --tw-backdrop-blur: ;
+                --tw-backdrop-brightness: ;
+                --tw-backdrop-contrast: ;
+                --tw-backdrop-grayscale: ;
+                --tw-backdrop-hue-rotate: ;
+                --tw-backdrop-invert: ;
+                --tw-backdrop-opacity: ;
+                --tw-backdrop-saturate: ;
+                --tw-backdrop-sepia: ;
+                --tw-contain-size: ;
+                --tw-contain-layout: ;
+                --tw-contain-paint: ;
+                --tw-contain-style: ;
+            }
+            ::backdrop {
+                --tw-border-spacing-x: 0;
+                --tw-border-spacing-y: 0;
+                --tw-translate-x: 0;
+                --tw-translate-y: 0;
+                --tw-rotate: 0;
+                --tw-skew-x: 0;
+                --tw-skew-y: 0;
+                --tw-scale-x: 1;
+                --tw-scale-y: 1;
+                --tw-pan-x: ;
+                --tw-pan-y: ;
+                --tw-pinch-zoom: ;
+                --tw-scroll-snap-strictness: proximity;
+                --tw-gradient-from-position: ;
+                --tw-gradient-via-position: ;
+                --tw-gradient-to-position: ;
+                --tw-ordinal: ;
+                --tw-slashed-zero: ;
+                --tw-numeric-figure: ;
+                --tw-numeric-spacing: ;
+                --tw-numeric-fraction: ;
+                --tw-ring-inset: ;
+                --tw-ring-offset-width: 0px;
+                --tw-ring-offset-color: #fff;
+                --tw-ring-color: rgba(59, 130, 246, 0.5);
+                --tw-ring-offset-shadow: 0 0 #0000;
+                --tw-ring-shadow: 0 0 #0000;
+                --tw-shadow: 0 0 #0000;
+                --tw-shadow-colored: 0 0 #0000;
+                --tw-blur: ;
+                --tw-brightness: ;
+                --tw-contrast: ;
+                --tw-grayscale: ;
+                --tw-hue-rotate: ;
+                --tw-invert: ;
+                --tw-saturate: ;
+                --tw-sepia: ;
+                --tw-drop-shadow: ;
+                --tw-backdrop-blur: ;
+                --tw-backdrop-brightness: ;
+                --tw-backdrop-contrast: ;
+                --tw-backdrop-grayscale: ;
+                --tw-backdrop-hue-rotate: ;
+                --tw-backdrop-invert: ;
+                --tw-backdrop-opacity: ;
+                --tw-backdrop-saturate: ;
+                --tw-backdrop-sepia: ;
+                --tw-contain-size: ;
+                --tw-contain-layout: ;
+                --tw-contain-paint: ;
+                --tw-contain-style: ;
+            } /*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/
+            *,
+            :after,
+            :before {
+                border: 0 solid #e5e7eb;
+                box-sizing: border-box;
+            }
+            :after,
+            :before {
+                --tw-content: "";
+            }
+            :host,
+            html {
+                line-height: 1.5;
+                -webkit-text-size-adjust: 100%;
+                font-family:
+                    Open Sans,
+                    ui-sans-serif,
+                    system-ui,
+                    sans-serif,
+                    Apple Color Emoji,
+                    Segoe UI Emoji,
+                    Segoe UI Symbol,
+                    Noto Color Emoji;
+                font-feature-settings: normal;
+                font-variation-settings: normal;
+                -moz-tab-size: 4;
+                tab-size: 4;
+                -webkit-tap-highlight-color: transparent;
+            }
+            body {
+                line-height: inherit;
+                margin: 0;
+            }
+            hr {
+                border-top-width: 1px;
+                color: inherit;
+                height: 0;
+            }
+            abbr:where([title]) {
+                text-decoration: underline dotted;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-size: inherit;
+                font-weight: inherit;
+            }
+            a {
+                color: inherit;
+                text-decoration: inherit;
+            }
+            b,
+            strong {
+                font-weight: bolder;
+            }
+            code,
+            kbd,
+            pre,
+            samp {
+                font-family:
+                    ui-monospace,
+                    SFMono-Regular,
+                    Menlo,
+                    Monaco,
+                    Consolas,
+                    Liberation Mono,
+                    Courier New,
+                    monospace;
+                font-feature-settings: normal;
+                font-size: 1em;
+                font-variation-settings: normal;
+            }
+            small {
+                font-size: 80%;
+            }
+            sub,
+            sup {
+                font-size: 75%;
+                line-height: 0;
+                position: relative;
+                vertical-align: baseline;
+            }
+            sub {
+                bottom: -0.25em;
+            }
+            sup {
+                top: -0.5em;
+            }
+            table {
+                border-collapse: collapse;
+                border-color: inherit;
+                text-indent: 0;
+            }
+            button,
+            input,
+            optgroup,
+            select,
+            textarea {
+                color: inherit;
+                font-family: inherit;
+                font-feature-settings: inherit;
+                font-size: 100%;
+                font-variation-settings: inherit;
+                font-weight: inherit;
+                letter-spacing: inherit;
+                line-height: inherit;
+                margin: 0;
+                padding: 0;
+            }
+            button,
+            select {
+                text-transform: none;
+            }
+            button,
+            input:where([type="button"]),
+            input:where([type="reset"]),
+            input:where([type="submit"]) {
+                -webkit-appearance: button;
+                background-color: transparent;
+                background-image: none;
+            }
+            :-moz-focusring {
+                outline: auto;
+            }
+            :-moz-ui-invalid {
+                box-shadow: none;
+            }
+            progress {
+                vertical-align: baseline;
+            }
+            ::-webkit-inner-spin-button,
+            ::-webkit-outer-spin-button {
+                height: auto;
+            }
+            [type="search"] {
+                -webkit-appearance: textfield;
+                outline-offset: -2px;
+            }
+            ::-webkit-search-decoration {
+                -webkit-appearance: none;
+            }
+            ::-webkit-file-upload-button {
+                -webkit-appearance: button;
+                font: inherit;
+            }
+            summary {
+                display: list-item;
+            }
+            blockquote,
+            dd,
+            dl,
+            figure,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            hr,
+            p,
+            pre {
+                margin: 0;
+            }
+            fieldset {
+                margin: 0;
+            }
+            fieldset,
+            legend {
+                padding: 0;
+            }
+            menu,
+            ol,
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            dialog {
+                padding: 0;
+            }
+            textarea {
+                resize: vertical;
+            }
+            input::placeholder,
+            textarea::placeholder {
+                color: #9ca3af;
+                opacity: 1;
+            }
+            [role="button"],
+            button {
+                cursor: pointer;
+            }
+            :disabled {
+                cursor: default;
+            }
+            audio,
+            canvas,
+            embed,
+            iframe,
+            img,
+            object,
+            svg,
+            video {
+                display: block;
+                vertical-align: middle;
+            }
+            img,
+            video {
+                height: auto;
+                max-width: 100%;
+            }
+            [hidden]:where(:not([hidden="until-found"])) {
+                display: none;
+            }
+            #webcrumbs .absolute {
+                position: absolute;
+            }
+            #webcrumbs .relative {
+                position: relative;
+            }
+            #webcrumbs .bottom-0 {
+                bottom: 0;
+            }
+            #webcrumbs .right-0 {
+                right: 0;
+            }
+            #webcrumbs .z-10 {
+                z-index: 10;
+            }
+            #webcrumbs .mx-4 {
+                margin-left: 16px;
+                margin-right: 16px;
+            }
+            #webcrumbs .-mb-16 {
+                margin-bottom: -64px;
+            }
+            #webcrumbs .-mr-16 {
+                margin-right: -64px;
+            }
+            #webcrumbs .mb-1\.5 {
+                margin-bottom: 6px;
+            }
+            #webcrumbs .mb-2 {
+                margin-bottom: 8px;
+            }
+            #webcrumbs .mb-4 {
+                margin-bottom: 16px;
+            }
+            #webcrumbs .mb-6 {
+                margin-bottom: 24px;
+            }
+            #webcrumbs .mb-8 {
+                margin-bottom: 32px;
+            }
+            #webcrumbs .ml-1 {
+                margin-left: 4px;
+            }
+            #webcrumbs .ml-2 {
+                margin-left: 8px;
+            }
+            #webcrumbs .mr-4 {
+                margin-right: 16px;
+            }
+            #webcrumbs .mt-1 {
+                margin-top: 4px;
+            }
+            #webcrumbs .mt-6 {
+                margin-top: 24px;
+            }
+            #webcrumbs .block {
+                display: block;
+            }
+            #webcrumbs .flex {
+                display: flex;
+            }
+            #webcrumbs .hidden {
+                display: none;
+            }
+            #webcrumbs .h-10 {
+                height: 40px;
+            }
+            #webcrumbs .h-4 {
+                height: 16px;
+            }
+            #webcrumbs .min-h-screen {
+                min-height: 100vh;
+            }
+            #webcrumbs .w-10 {
+                width: 40px;
+            }
+            #webcrumbs .w-4 {
+                width: 16px;
+            }
+            #webcrumbs .w-full {
+                width: 100%;
+            }
+            #webcrumbs .max-w-4xl {
+                max-width: 56rem;
+            }
+            #webcrumbs .flex-1 {
+                flex: 1 1 0%;
+            }
+            #webcrumbs .flex-grow {
+                flex-grow: 1;
+            }
+            #webcrumbs .transform {
+                transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+                    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            }
+            #webcrumbs .flex-row {
+                flex-direction: row;
+            }
+            #webcrumbs .flex-col {
+                flex-direction: column;
+            }
+            #webcrumbs .items-start {
+                align-items: flex-start;
+            }
+            #webcrumbs .items-center {
+                align-items: center;
+            }
+            #webcrumbs .justify-center {
+                justify-content: center;
+            }
+            #webcrumbs .justify-between {
+                justify-content: space-between;
+            }
+            #webcrumbs .gap-4 {
+                gap: 16px;
+            }
+            #webcrumbs :is(.-space-x-2 > :not([hidden]) ~ :not([hidden])) {
+                --tw-space-x-reverse: 0;
+                margin-left: calc(-8px * (1 - var(--tw-space-x-reverse)));
+                margin-right: calc(-8px * var(--tw-space-x-reverse));
+            }
+            #webcrumbs :is(.space-x-2 > :not([hidden]) ~ :not([hidden])) {
+                --tw-space-x-reverse: 0;
+                margin-left: calc(8px * (1 - var(--tw-space-x-reverse)));
+                margin-right: calc(8px * var(--tw-space-x-reverse));
+            }
+            #webcrumbs :is(.space-x-3 > :not([hidden]) ~ :not([hidden])) {
+                --tw-space-x-reverse: 0;
+                margin-left: calc(12px * (1 - var(--tw-space-x-reverse)));
+                margin-right: calc(12px * var(--tw-space-x-reverse));
+            }
+            #webcrumbs :is(.space-x-4 > :not([hidden]) ~ :not([hidden])) {
+                --tw-space-x-reverse: 0;
+                margin-left: calc(16px * (1 - var(--tw-space-x-reverse)));
+                margin-right: calc(16px * var(--tw-space-x-reverse));
+            }
+            #webcrumbs :is(.space-y-5 > :not([hidden]) ~ :not([hidden])) {
+                --tw-space-y-reverse: 0;
+                margin-bottom: calc(20px * var(--tw-space-y-reverse));
+                margin-top: calc(20px * (1 - var(--tw-space-y-reverse)));
+            }
+            #webcrumbs .overflow-hidden {
+                overflow: hidden;
+            }
+            #webcrumbs .rounded {
+                border-radius: 7px;
+            }
+            #webcrumbs .rounded-2xl {
+                border-radius: 28px;
+            }
+            #webcrumbs .rounded-full {
+                border-radius: 9999px;
+            }
+            #webcrumbs .rounded-lg {
+                border-radius: 14px;
+            }
+            #webcrumbs .rounded-md {
+                border-radius: 10.5px;
+            }
+            #webcrumbs .rounded-xl {
+                border-radius: 21px;
+            }
+            #webcrumbs .border {
+                border-width: 1px;
+            }
+            #webcrumbs .border-2 {
+                border-width: 2px;
+            }
+            #webcrumbs .border-t {
+                border-top-width: 1px;
+            }
+            #webcrumbs .border-gray-300 {
+                --tw-border-opacity: 1;
+                border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+            }
+            #webcrumbs .border-primary-600 {
+                --tw-border-opacity: 1;
+                border-color: rgb(179 115 111 / var(--tw-border-opacity, 1));
+            }
+            #webcrumbs .bg-primary-500 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(191 122 118 / var(--tw-bg-opacity, 1));
+            }
+            #webcrumbs .bg-primary-600 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(179 115 111 / var(--tw-bg-opacity, 1));
+            }
+            #webcrumbs .bg-white {
+                --tw-bg-opacity: 1;
+                background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+            }
+            #webcrumbs .bg-white\/10 {
+                background-color: hsla(0, 0%, 100%, 0.1);
+            }
+            #webcrumbs .bg-white\/20 {
+                background-color: hsla(0, 0%, 100%, 0.2);
+            }
+            #webcrumbs .bg-gradient-to-br {
+                background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+            }
+            #webcrumbs .from-blue-50 {
+                --tw-gradient-from: #eff6ff var(--tw-gradient-from-position);
+                --tw-gradient-to: rgba(239, 246, 255, 0) var(--tw-gradient-to-position);
+                --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+            }
+            #webcrumbs .to-indigo-100 {
+                --tw-gradient-to: #e0e7ff var(--tw-gradient-to-position);
+            }
+            #webcrumbs .p-1\.5 {
+                padding: 6px;
+            }
+            #webcrumbs .p-10 {
+                padding: 40px;
+            }
+            #webcrumbs .p-2 {
+                padding: 8px;
+            }
+            #webcrumbs .p-4 {
+                padding: 16px;
+            }
+            #webcrumbs .p-6 {
+                padding: 24px;
+            }
+            #webcrumbs .p-8 {
+                padding: 32px;
+            }
+            #webcrumbs .px-4 {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            #webcrumbs .py-2 {
+                padding-bottom: 8px;
+                padding-top: 8px;
+            }
+            #webcrumbs .py-2\.5 {
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+            #webcrumbs .py-3 {
+                padding-bottom: 12px;
+                padding-top: 12px;
+            }
+            #webcrumbs .text-center {
+                text-align: center;
+            }
+            #webcrumbs .text-2xl {
+                font-size: 24px;
+                line-height: 31.200000000000003px;
+            }
+            #webcrumbs .text-\[200px\] {
+                font-size: 200px;
+            }
+            #webcrumbs .text-sm {
+                font-size: 14px;
+                line-height: 21px;
+            }
+            #webcrumbs .text-xl {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            #webcrumbs .text-xs {
+                font-size: 12px;
+                line-height: 19.200000000000003px;
+            }
+            #webcrumbs .font-bold {
+                font-weight: 700;
+            }
+            #webcrumbs .font-medium {
+                font-weight: 500;
+            }
+            #webcrumbs .text-gray-500 {
+                --tw-text-opacity: 1;
+                color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+            }
+            #webcrumbs .text-gray-600 {
+                --tw-text-opacity: 1;
+                color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+            }
+            #webcrumbs .text-gray-700 {
+                --tw-text-opacity: 1;
+                color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+            }
+            #webcrumbs .text-primary-600 {
+                --tw-text-opacity: 1;
+                color: rgb(179 115 111 / var(--tw-text-opacity, 1));
+            }
+            #webcrumbs .text-white {
+                --tw-text-opacity: 1;
+                color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+            }
+            #webcrumbs .text-white\/70 {
+                color: hsla(0, 0%, 100%, 0.7);
+            }
+            #webcrumbs .opacity-20 {
+                opacity: 0.2;
+            }
+            #webcrumbs .shadow-md {
+                --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+                --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+            }
+            #webcrumbs .shadow-md,
+            #webcrumbs .shadow-xl {
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            }
+            #webcrumbs .shadow-xl {
+                --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+                --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+            }
+            #webcrumbs .outline-none {
+                outline: 2px solid transparent;
+                outline-offset: 2px;
+            }
+            #webcrumbs .backdrop-blur-sm {
+                --tw-backdrop-blur: blur(4px);
+                -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+                    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate)
+                    var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+                    var(--tw-backdrop-sepia);
+                backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
+                    var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+                    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            }
+            #webcrumbs .transition-all {
+                transition-duration: 0.15s;
+                transition-property: all;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            #webcrumbs .transition-colors {
+                transition-duration: 0.15s;
+                transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            #webcrumbs .duration-300 {
+                transition-duration: 0.3s;
+            }
+            #webcrumbs {
+                font-family: Open Sans !important;
+                font-size: 16px !important;
+            }
+            #webcrumbs :is(.bg-primary-500) {
+                color: hsla(0, 0%, 100%, 0.9) !important;
+                font-weight: 600;
+            }
+            #webcrumbs :is(.bg-primary-600) {
+                color: hsla(0, 0%, 100%, 0.9) !important;
+                font-weight: 600;
+            }
+            #webcrumbs .hover\:-translate-y-0\.5:hover {
+                --tw-translate-y: -2px;
+                transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+                    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            }
+            #webcrumbs .hover\:bg-gray-50:hover {
+                --tw-bg-opacity: 1;
+                background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+            }
+            #webcrumbs .hover\:bg-primary-700:hover {
+                --tw-bg-opacity: 1;
+                background-color: rgb(143 92 89 / var(--tw-bg-opacity, 1));
+            }
+            #webcrumbs .hover\:text-primary-600:hover {
+                --tw-text-opacity: 1;
+                color: rgb(179 115 111 / var(--tw-text-opacity, 1));
+            }
+            #webcrumbs .hover\:text-primary-800:hover {
+                --tw-text-opacity: 1;
+                color: rgb(108 69 67 / var(--tw-text-opacity, 1));
+            }
+            #webcrumbs .hover\:shadow-lg:hover {
+                --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+                --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            }
+            #webcrumbs .focus\:border-primary-500:focus {
+                --tw-border-opacity: 1;
+                border-color: rgb(191 122 118 / var(--tw-border-opacity, 1));
+            }
+            #webcrumbs .focus\:ring-2:focus {
+                --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width)
+                    var(--tw-ring-offset-color);
+                --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width))
+                    var(--tw-ring-color);
+                box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+            }
+            #webcrumbs .focus\:ring-primary-400:focus {
+                --tw-ring-opacity: 1;
+                --tw-ring-color: rgb(215 138 133 / var(--tw-ring-opacity, 1));
+            }
+            @media (min-width: 768px) {
+                #webcrumbs .md\:flex {
+                    display: flex;
+                }
+                #webcrumbs .md\:w-1\/2 {
+                    width: 50%;
+                }
+                #webcrumbs .md\:flex-row {
+                    flex-direction: row;
+                }
+                #webcrumbs .md\:p-10 {
+                    padding: 40px;
+                }
+            }
+        </style>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="https://cdn.webcrumbs.org/assets/images/landing/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="192x192"
+            href="https://cdn.webcrumbs.org/assets/images/landing/logo192.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="512x512"
+            href="https://cdn.webcrumbs.org/assets/images/landing/logo512.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Webcrumbs" />
+    </head>
+    <body>
+        <div id="webcrumbs">
+            <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden max-w-4xl w-full flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/2 p-8 md:p-10 relative">
+                        <div class="flex justify-between items-center mb-8">
+                            <div class="flex items-center space-x-2">
+                                <div class="bg-primary-500 p-1.5 rounded-md">
+                                    <span class="material-symbols-outlined text-white">cloud</span>
+                                </div>
+                                <h1 class="text-xl font-bold">CloudStorage</h1>
+                            </div>
+                            <button class="text-sm text-gray-500 hover:text-primary-600 transition-colors duration-300">
+                                Need help?
+                            </button>
+                        </div>
+                        <h2 class="text-2xl font-bold mb-2">Welcome Back</h2>
+                        <p class="text-gray-500 mb-8">Please enter your details to sign in</p>
+                        <div class="space-y-5">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-400 focus:border-primary-500 transition-all duration-300 outline-none"
+                                    placeholder="Enter your email"
+                                />
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mb-1.5">
+                                    <label for="password" class="block text-sm font-medium text-gray-700"
+                                        >Password</label
+                                    >
+                                    <button
+                                        class="text-xs text-primary-600 hover:text-primary-800 transition-colors duration-300 font-medium"
+                                    >
+                                        Forgot password?
+                                    </button>
+                                </div>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-400 focus:border-primary-500 transition-all duration-300 outline-none"
+                                    placeholder="Enter your password"
+                                />
+                            </div>
+                            <div class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    id="remember"
+                                    class="w-4 h-4 text-primary-600 rounded border-gray-300 focus:ring-primary-400"
+                                />
+                                <label for="remember" class="ml-2 block text-sm text-gray-700">
+                                    Remember for 30 days
+                                </label>
+                            </div>
+                            <button
+                                class="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                            >
+                                Sign In
+                            </button>
+                            <div class="relative flex items-center justify-center py-2">
+                                <div class="border-t border-gray-300 flex-grow"></div>
+                                <span class="mx-4 text-sm text-gray-500">or continue with</span>
+                                <div class="border-t border-gray-300 flex-grow"></div>
+                            </div>
+                            <div class="flex space-x-3">
+                                <button
+                                    class="flex-1 flex justify-center items-center py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                                >
+                                    <i class="fa-brands fa-google text-xl"></i>
+                                </button>
+                                <button
+                                    class="flex-1 flex justify-center items-center py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                                >
+                                    <i class="fa-brands fa-apple text-xl"></i>
+                                </button>
+                                <button
+                                    class="flex-1 flex justify-center items-center py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                                >
+                                    <i class="fa-brands fa-microsoft text-xl"></i>
+                                </button>
+                            </div>
+                            <p class="text-center text-gray-600 text-sm mt-6">
+                                Don&#x27;t have an account?
+                                <button
+                                    class="text-primary-600 hover:text-primary-800 font-medium ml-1 transition-colors duration-300"
+                                >
+                                    Sign up
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 bg-primary-600 p-10 hidden md:flex flex-col justify-between relative overflow-hidden"
+                    >
+                        <div class="relative z-10">
+                            <h3 class="text-white text-2xl font-bold mb-6">
+                                Store everything important in one secure location
+                            </h3>
+                            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl mb-8">
+                                <div class="flex items-start mb-4">
+                                    <div class="bg-white/20 p-2 rounded-full mr-4">
+                                        <span class="material-symbols-outlined text-white">security</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white font-medium">End-to-end encryption</h4>
+                                        <p class="text-white/70 text-sm mt-1">
+                                            Your files are encrypted and secure in our cloud
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-white/20 p-2 rounded-full mr-4">
+                                        <span class="material-symbols-outlined text-white">devices</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white font-medium">Access anywhere</h4>
+                                        <p class="text-white/70 text-sm mt-1">Available on desktop, mobile and web</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 right-0 opacity-20 -mb-16 -mr-16">
+                            <span class="material-symbols-outlined text-white text-[200px]">cloud_circle</span>
+                        </div>
+                        <div class="flex items-center space-x-4 relative z-10">
+                            <div class="flex -space-x-2">
+                                <img
+                                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwxfHx1c2VyJTIwcHJvZmlsZXxlbnwwfHx8fDE3NjExNjc2ODR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    alt="User"
+                                    class="w-10 h-10 rounded-full border-2 border-primary-600"
+                                    keywords="user profile, avatar, woman"
+                                />
+                                <img
+                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwyfHx1c2VyJTIwcHJvZmlsZXxlbnwwfHx8fDE3NjExNjc2ODR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    alt="User"
+                                    class="w-10 h-10 rounded-full border-2 border-primary-600"
+                                    keywords="user profile, avatar, man"
+                                />
+                                <img
+                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwzfHx1c2VyJTIwcHJvZmlsZXxlbnwwfHx8fDE3NjExNjc2ODR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    alt="User"
+                                    class="w-10 h-10 rounded-full border-2 border-primary-600"
+                                    keywords="user profile, avatar, woman"
+                                />
+                            </div>
+                            <div class="text-white">
+                                <p class="text-sm font-medium">Join 10,000+ users</p>
+                                <p class="text-xs text-white/70">Start your free trial today</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
