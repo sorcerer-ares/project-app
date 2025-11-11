@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const deotenv = require("dotenv")
+const dotenv = require("dotenv")
 const path = require("path")
 const fileRoutes = require("./routes/fileroutes")
 const fileDisplay = require('./routes/files');
