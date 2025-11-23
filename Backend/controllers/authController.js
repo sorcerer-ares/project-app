@@ -3,9 +3,9 @@ import User from "../model/userModel.js";
 import bcrypt from "bcryptjs";
 
 export const signup = async (req, res) => {
-  const { fullName, email, password } = req.body;
+  const { email, fullName, password } = req.body;
   try {
-    if (!fullName || !email || !password) {
+    if ( !email || !fullName || !password) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
@@ -41,7 +41,7 @@ export const signup = async (req, res) => {
     }
   } catch (error) {
     console.log("Error in signup controller", error.message);
-    res.status(500).json({ message: error.meassage });
+    res.status(500).json({ message: error.message });
   }
 };
 
